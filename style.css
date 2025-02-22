@@ -1,0 +1,60 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+button {
+    position: absolute;
+    /* Required for top & left to work */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* Shift button back by half its size */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(74, 74, 141);
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 25px;
+    color: aliceblue;
+    border-radius: 5px;
+    box-shadow: 0px 5px 10px rgb(91, 80, 80);
+    cursor: pointer;
+    overflow: hidden;
+}
+
+button::before {
+    content: "";
+   
+    
+    height: 10px;
+    width: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    transition: width 0.5s, height 0.5s;
+    color: black;
+}
+
+button:hover::before {
+    background-color: white;
+    width: 70px;
+    height: 50px;
+    transition: 1s;
+    color: black;
+}
+
+button:hover {
+    color: rgb(0, 0, 0);
+}
